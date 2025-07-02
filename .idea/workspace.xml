@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="59d9b0b7-1dbb-42a0-bfbb-b9726c7f0073" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backprop_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backprop_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backprop_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/backprop_network.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +56,7 @@
       <updated>1751300990648</updated>
       <workItem from="1751300991756" duration="703000" />
       <workItem from="1751385624255" duration="780000" />
-      <workItem from="1751438666728" duration="4049000" />
+      <workItem from="1751438666728" duration="5853000" />
     </task>
     <servers />
   </component>

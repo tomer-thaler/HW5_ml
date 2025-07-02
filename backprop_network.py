@@ -54,8 +54,12 @@ class Network(object):
                     "y_true": numpy array of shape (batch_size,) containing the true labels of the batch
             Returns: a numpy array of shape (10,batch_size) where each column is the gradient of the loss with respect to y_pred (the output of the network before the softmax layer) for the given example.
         """
-        # TODO: Implement
-        raise NotImplementedError
+        probs = softmax(logits, axis=0)
+        one_hot = np.zeros_like(logits)
+        one_hot[y_true, np.arange(y_true.size)] = 1
+        batch_size = y_true.size
+        dZ = (probs - one_hot) / batch_size
+        return dZ
 
 
     def forward_propagation(self, X):
