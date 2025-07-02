@@ -68,11 +68,29 @@ class Network(object):
             Returns: "ZL" - numpy array of shape (10, batch_size), the output of the network on the input X (before the softmax layer)
                     "forward_outputs" - A list of length self.num_layers containing the forward computation (parameters & output of each layer).
         """
-        ZL = 1
-        forward_outputs = []
+        Z_prev = X  # Z₀  (input)
+        forward_outputs = []  # will cache (V_l, Z_{l-1}) per layer
 
-        # TODO: Implement the forward function
-        raise NotImplementedError
+        # Layers are numbered 1 … self.num_layers in the parameters dict
+        for l in range(1, self.num_layers + 1):
+            W = self.parameters[f'W{l}']  # weight matrix (k_l, k_{l-1})
+            b = self.parameters[f'b{l}']  # bias vector  (k_l, 1)
+
+            V = W @ Z_prev + b  # linear part V_l = W_l Z_{l-1} + b_l
+
+            # Activation: ReLU for hidden layers, identity for output
+            if l < self.num_layers:
+                Z = self.relu(V)  # hidden layer output Z_l
+            else:
+                Z = V  # final layer logits (no activation)
+
+            # Save cache needed for back-prop: (pre-act, input to layer)
+            forward_outputs.append((V, Z_prev))
+
+            # Prepare for next layer
+            Z_prev = Z
+
+        ZL = Z_prev  # logits of the last layer (10, batch)
         return ZL, forward_outputs
 
     def backpropagation(self, ZL, Y, forward_outputs):
