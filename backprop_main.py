@@ -9,6 +9,13 @@ x = np.array([[-2, 0, 3],
               [ 5,-1, 4]])
 print(net_tmp.relu(x))          # should print [[0 0 3] [5 0 4]]
 
+v = np.array([[-2.0, 0.0, 3.0],
+              [ 5.0,-1.0, 4.0]])
+print(net_tmp.relu_derivative(v))
+# Expected:
+# [[0. 0. 1.]
+#  [1. 0. 1.]]
+
 
 # Loading Data
 np.random.seed(0)  # For reproducibility

@@ -32,8 +32,12 @@ class Network(object):
 
 
     def relu_derivative(self,x):
-        """TODO: Implement the derivative of the relu function."""
-        raise NotImplementedError
+        """
+        Computes the derivative of ReLU element-wise
+        Input:  "x"  – numpy array of arbitrary shape, typically V_l
+        Output: "dx" – numpy array of same shape, 1 where x > 0 and 0 elsewhere
+        """
+        return (x > 0).astype(x.dtype)
 
 
     def cross_entropy_loss(self, logits, y_true):
