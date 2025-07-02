@@ -173,7 +173,7 @@ class Network(object):
             test_cost = self.cross_entropy_loss(ZL, y_test)
             preds = np.argmax(ZL, axis=0)
             test_acc = self.calculate_accuracy(preds, y_test, len(y_test))
-            # print(f"Epoch: {epoch + 1}, Test loss: {test_cost:.20f}, Test accuracy: {test_acc:.20f}")
+            print(f"Epoch: {epoch + 1}, Test loss: {test_cost:.20f}, Test accuracy: {test_acc:.20f}")
 
             epoch_test_cost.append(test_cost)
             epoch_test_acc.append(test_acc)
