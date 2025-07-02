@@ -57,7 +57,7 @@
       <updated>1751300990648</updated>
       <workItem from="1751300991756" duration="703000" />
       <workItem from="1751385624255" duration="780000" />
-      <workItem from="1751438666728" duration="7979000" />
+      <workItem from="1751438666728" duration="11917000" />
     </task>
     <servers />
   </component>
@@ -65,6 +65,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HW5_ml$backprop_main.coverage" NAME="backprop_main Coverage Results" MODIFIED="1751449235829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HW5_ml$backprop_main.coverage" NAME="backprop_main Coverage Results" MODIFIED="1751453873264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

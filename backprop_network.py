@@ -105,15 +105,14 @@ class Network(object):
         """
         grads = {}  # will hold dW_l, db_l
         L = self.num_layers  # total number of layers
-        batch_size = Y.size
 
-        # ---------- 1. gradient at the output layer ----------
+        # 1. gradient at the output layer
         dZ = self.cross_entropy_derivative(ZL, Y)  # (10, batch_size)
 
-        # ---------- 2. loop backwards through all layers ----------
+        # 2. loop backwards through all layers
         for l in reversed(range(1, L + 1)):  # L, L-1, …, 1
             V_l, Z_prev = forward_outputs[l - 1]  # cache from forward pass
-            dW = dZ @ Z_prev.T  # shape (k_l, k_{l-1})
+            dW = dZ @ Z_prev.T  # shape (k_l, m)   @   shape(m, k_{l-1}) = shape (k_l, k_{l-1})
             db = np.sum(dZ, axis=1, keepdims=True)  # shape (k_l, 1)
 
             grads[f'dW{l}'] = dW
