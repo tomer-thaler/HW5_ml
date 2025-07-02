@@ -22,10 +22,14 @@ class Network(object):
             self.parameters['W' + str(l)] = np.random.randn(sizes[l], sizes[l-1]) * np.sqrt(2. / sizes[l-1])
             self.parameters['b' + str(l)] = np.zeros((sizes[l], 1))
 
+    def relu(self, x):
+        """
+        Applies the ReLU activation element-wise
+            Input:  "x" – numpy array of arbitrary shape, e.g. (neurons, batch_size)
+            Output: "y" – numpy array of same shape as "x", with negatives set to 0
+        """
+        return np.maximum(0, x)
 
-    def relu(self,x):
-        """TODO: Implement the relu function."""
-        raise NotImplementedError
 
     def relu_derivative(self,x):
         """TODO: Implement the derivative of the relu function."""
