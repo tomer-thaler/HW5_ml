@@ -103,10 +103,28 @@ class Network(object):
                                 grads["db" + str(l)] is a numpy array of shape (sizes[l],1).
         
         """
-        grads = {}
-        
-        #TODO: Implement the backward function
-        raise NotImplementedError
+        grads = {}  # will hold dW_l, db_l
+        L = self.num_layers  # total number of layers
+        batch_size = Y.size
+
+        # ---------- 1. gradient at the output layer ----------
+        dZ = self.cross_entropy_derivative(ZL, Y)  # (10, batch_size)
+
+        # ---------- 2. loop backwards through all layers ----------
+        for l in reversed(range(1, L + 1)):  # L, L-1, …, 1
+            V_l, Z_prev = forward_outputs[l - 1]  # cache from forward pass
+            dW = dZ @ Z_prev.T  # shape (k_l, k_{l-1})
+            db = np.sum(dZ, axis=1, keepdims=True)  # shape (k_l, 1)
+
+            grads[f'dW{l}'] = dW
+            grads[f'db{l}'] = db
+
+            # prepare dZ for the next (previous) layer
+            if l > 1:  # no back-prop past input layer
+                W_l = self.parameters[f'W{l}']  # (k_l, k_{l-1})
+                V_prev, _ = forward_outputs[l - 2]  # V_{l-1}
+                dZ = (W_l.T @ dZ) * self.relu_derivative(V_prev)
+
         return grads
 
 
