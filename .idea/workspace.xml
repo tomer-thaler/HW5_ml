@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="59d9b0b7-1dbb-42a0-bfbb-b9726c7f0073" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backprop_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backprop_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backprop_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/backprop_network.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,7 @@
       <updated>1751300990648</updated>
       <workItem from="1751300991756" duration="703000" />
       <workItem from="1751385624255" duration="780000" />
-      <workItem from="1751438666728" duration="16975000" />
+      <workItem from="1751438666728" duration="20471000" />
     </task>
     <servers />
   </component>
@@ -66,6 +64,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HW5_ml$backprop_main.coverage" NAME="backprop_main Coverage Results" MODIFIED="1751453873264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HW5_ml$backprop_main.coverage" NAME="backprop_main Coverage Results" MODIFIED="1751472213916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
