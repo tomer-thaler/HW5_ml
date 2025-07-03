@@ -121,7 +121,7 @@ def linear_classifier_section_d():
     fig, axes = plt.subplots(2, 5, figsize=(10, 4))
     axes = axes.ravel()
     for i in range(10):
-        axes[i].imshow(W[i].reshape(28, 28),interpolation='nearest', cmap="gray")
+        axes[i].imshow(W[i].reshape(28, 28),interpolation='nearest')
         axes[i].set_title(f"Digit {i}")
         axes[i].axis("off")
 
@@ -134,4 +134,5 @@ def linear_classifier_section_d():
 
 if __name__ == "__main__":
     #lr_sweep_section_b()   # generates plots for part (b)
-    test_full_section_c()   # printing test acc for the full mnist set
+    #test_full_section_c()   # printing test acc for the full mnist set
+    linear_classifier_section_d()
