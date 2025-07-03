@@ -30,7 +30,7 @@ x_train, y_train, x_test, y_test = load_as_matrix_with_labels(n_train, n_test)
 
 # Training configuration
 epochs = 30
-batch_size = 100
+batch_size = 10
 learning_rates = [1e-3, 1e-2, 1e-1, 1, 10] #for section b
 
 
